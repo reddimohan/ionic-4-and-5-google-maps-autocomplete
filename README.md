@@ -10,16 +10,21 @@
 <!-- PROJECT LOGO -->
 <br />
 <p align="center">
-  <a href="https://github.com/reddimohan/ionic-3-google-maps-autocomplete">
+  <a href="https://github.com/reddimohan/ionic-4-and-5-google-maps-autocomplete">
   </a>
 
-  <h3 align="center">Ionic 3 Google maps Auto complete</h3>
+  <h3 align="center">
+    Ionic 4v and 5v Google maps Auto complete
+    <a href="https://github.com/reddimohan/ionic-4-and-5-google-maps-autocomplete">
+      Ionic 3 version here
+    </a>
+  </h3> 
 
   <p align="center">
     Ionic 3 and Google maps integration, Search and Auto complete of address in map, drag map to get the address.
     <br />
     <br />
-    <a href="https://github.com/reddimohan/ionic-3-google-maps-autocomplete/issues">Report Bug</a>
+    <a href="https://github.com/reddimohan/ionic-4-and-5-google-maps-autocomplete/issues">Report Bug</a>
   </p>
 </p>
 
@@ -44,7 +49,7 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-[![https://reddimohan.github.io][product-screenshot-1]]()
+[![https://reddimohan.github.io][product-screenshot-1]](width: "250")
 <br />
 [![https://reddimohan.github.io][product-screenshot-2]]()
 <br />
@@ -108,7 +113,7 @@ System:
 
 1. Clone the repo
 ```sh
-git clone https://github.com/reddimohan/ionic-3-google-maps-autocomplete.git
+git clone https://github.com/reddimohan/ionic-4-and-5-google-maps-autocomplete.git
 ```
 2. Install NPM packages
 ```sh
@@ -129,7 +134,7 @@ npm install --save @ionic-native/geolocation
 <!-- ROADMAP -->
 ## Roadmap
 
-See the [open issues](https://github.com/reddimohan/ionic-3-google-maps-autocomplete/issues) for a list of proposed features (and known issues).
+See the [open issues](https://github.com/reddimohan/ionic-4-and-5-google-maps-autocomplete/issues) for a list of proposed features (and known issues).
 
 
 
@@ -158,7 +163,7 @@ Distributed under the MIT License. See `LICENSE` for more information.
 
 Mohan - [LinkedIn](https://linkedin.com/in/reddimohan) - [Twitter](https://twitter.com/reddimohan)
 
-Project Link: [https://github.com/reddimohan/ionic-3-google-maps-autocomplete](https://github.com/reddimohan/ionic-3-google-maps-autocomplete)
+Project Link: [https://github.com/reddimohan/ionic-4-and-5-google-maps-autocomplete](https://github.com/reddimohan/ionic-4-and-5-google-maps-autocomplete)
 
 
 
@@ -168,18 +173,18 @@ Project Link: [https://github.com/reddimohan/ionic-3-google-maps-autocomplete](h
 
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
-[contributors-shield]: https://img.shields.io/github/contributors/reddimohan/ionic-3-google-maps-autocomplete.svg?style=flat-square
-[contributors-url]: https://github.com/reddimohan/ionic-3-google-maps-autocomplete/graphs/contributors
-[forks-shield]: https://img.shields.io/github/forks/reddimohan/ionic-3-google-maps-autocomplete.svg?style=flat-square
-[forks-url]: https://github.com/reddimohan/ionic-3-google-maps-autocomplete/network/members
-[stars-shield]: https://img.shields.io/github/stars/reddimohan/ionic-3-google-maps-autocomplete.svg?style=flat-square
-[stars-url]: https://github.com/reddimohan/ionic-3-google-maps-autocomplete/stargazers
-[issues-shield]: https://img.shields.io/github/issues/reddimohan/ionic-3-google-maps-autocomplete.svg?style=flat-square
-[issues-url]: https://github.com/reddimohan/ionic-3-google-maps-autocomplete/issues
-[license-shield]: https://img.shields.io/github/license/reddimohan/ionic-3-google-maps-autocomplete.svg?style=flat-square
-[traffic-url]: https://github.com/reddimohan/ionic-3-google-maps-autocomplete/graphs/traffic
-[traffic-shield]: https://img.shields.io/github/traffic/reddimohan/ionic-3-google-maps-autocomplete.svg?style=flat-square
-[license-url]: https://github.com/reddimohan/ionic-3-google-maps-autocomplete/blob/master/LICENSE
+[contributors-shield]: https://img.shields.io/github/contributors/reddimohan/ionic-4-and-5-google-maps-autocomplete.svg?style=flat-square
+[contributors-url]: https://github.com/reddimohan/ionic-4-and-5-google-maps-autocomplete/graphs/contributors
+[forks-shield]: https://img.shields.io/github/forks/reddimohan/ionic-4-and-5-google-maps-autocomplete.svg?style=flat-square
+[forks-url]: https://github.com/reddimohan/ionic-4-and-5-google-maps-autocomplete/network/members
+[stars-shield]: https://img.shields.io/github/stars/reddimohan/ionic-4-and-5-google-maps-autocomplete.svg?style=flat-square
+[stars-url]: https://github.com/reddimohan/ionic-4-and-5-google-maps-autocomplete/stargazers
+[issues-shield]: https://img.shields.io/github/issues/reddimohan/ionic-4-and-5-google-maps-autocomplete.svg?style=flat-square
+[issues-url]: https://github.com/reddimohan/ionic-4-and-5-google-maps-autocomplete/issues
+[license-shield]: https://img.shields.io/github/license/reddimohan/ionic-4-and-5-google-maps-autocomplete.svg?style=flat-square
+[traffic-url]: https://github.com/reddimohan/ionic-4-and-5-google-maps-autocomplete/graphs/traffic
+[traffic-shield]: https://img.shields.io/github/traffic/reddimohan/ionic-4-and-5-google-maps-autocomplete.svg?style=flat-square
+[license-url]: https://github.com/reddimohan/ionic-4-and-5-google-maps-autocomplete/blob/master/LICENSE
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=flat-square&logo=linkedin&colorB=555
 [linkedin-url]: https://linkedin.com/in/reddimohan
 [product-screenshot-1]: screenshots/1.png
