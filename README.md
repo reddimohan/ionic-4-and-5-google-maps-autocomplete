@@ -15,7 +15,7 @@
 
   <h3 align="center">
     Ionic 4v and 5v Google maps Auto complete
-    <a href="https://github.com/reddimohan/ionic-4-and-5-google-maps-autocomplete">
+    <a href="https://github.com/reddimohan/ionic-3-google-maps-autocomplete">
       Ionic 3 version here
     </a>
   </h3> 
