@@ -1,26 +1,49 @@
-/*
- * App Global CSS
- * ----------------------------------------------------------------------------
- * Put style rules here that you want to apply globally. These styles are for
- * the entire app and not just one component. Additionally, this file can be
- * used as an entry point to import other CSS/Sass files to be included in the
- * output CSS.
- * For more information on global stylesheets, visit the documentation:
- * https://ionicframework.com/docs/layout/global-stylesheets
- */
+// http://ionicframework.com/docs/theming/
 
-/* Core CSS required for Ionic components to work properly */
-@import "~@ionic/angular/css/core.css";
+@import 'theme/variables.scss';
 
-/* Basic CSS for apps built with Ionic */
-@import "~@ionic/angular/css/normalize.css";
-@import "~@ionic/angular/css/structure.css";
-@import "~@ionic/angular/css/typography.css";
-@import '~@ionic/angular/css/display.css';
+// App Global Sass
+// --------------------------------------------------
+// Put style rules here that you want to apply globally. These
+// styles are for the entire app and not just one component.
+// Additionally, this file can be also used as an entry point
+// to import other Sass files to be included in the output CSS.
+//
+// Shared Sass variables, which can be used to adjust Ionic's
+// default Sass variables, belong in "theme/variables.scss".
+//
+// To declare rules for a specific mode, create a child rule
+// for the .md, .ios, or .wp mode classes. The mode class is
+// automatically applied to the <body> element in the app.
 
-/* Optional CSS utils that can be commented out */
-@import "~@ionic/angular/css/padding.css";
-@import "~@ionic/angular/css/float-elements.css";
-@import "~@ionic/angular/css/text-alignment.css";
-@import "~@ionic/angular/css/text-transformation.css";
-@import "~@ionic/angular/css/flex-utils.css";
+// Fonts
+@font-face {
+    font-family: 'Play-Regular';
+    src: url('./assets/fonts/play/Play-Regular.ttf') format('truetype');
+  }
+  @font-face {
+    font-family: 'Play-Bold';
+    src: url('./assets/fonts/play/Play-Bold.ttf') format('truetype');
+  }
+  
+  // Fonts
+  @font-face {
+    font-family: 'Libre-Regular';
+    src: url('./assets/fonts/li/LibreFranklin-Regular.ttf') format('truetype');
+  }
+  @font-face {
+    font-family: 'Libre-Light';
+    src: url('./assets/fonts/li/LibreFranklin-Light.ttf') format('truetype');
+  }
+  
+  .primary-btn {
+    background-color: #675FA9;
+  }
+  .button-ios.activated, .button-md.activated, .button-md:hover:not(.disable-hover) {
+    background-color: #675FA1 !important;
+  }
+  
+  .custom-btn {
+    background-color: $primary-btn-background;
+    padding: 17px 30px !important;
+  }
