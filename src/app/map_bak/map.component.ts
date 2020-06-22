@@ -1,21 +1,17 @@
 import { Component, OnInit, ElementRef, ViewChild, NgZone } from '@angular/core';
-import { NavController, Platform, ModalController, NavParams } from '@ionic/angular';
+import { NavController, Platform, NavParams, ModalController } from '@ionic/angular';
 import { MapService } from '../services/map/map.service';
 import { SpinnerService } from '../services/spinner/spinner.service';
-import { Geolocation } from '@ionic-native/geolocation/ngx';
 import { Observable } from 'rxjs';
-import { google } from 'google-maps';
 
-declare var google: any;
 declare var google;
-// declare var google: google;
 
 @Component({
   selector: 'app-map',
-  templateUrl: './map.component.html',
-  styleUrls: ['./map.component.scss'],
+  templateUrl: 'map.component.html',
+  styleUrls: ['map.component.scss'],
 })
-export class MapComponent implements OnInit {
+export class MapComponent {
 
   @ViewChild('map') mapElement: ElementRef;
   @ViewChild('searchbar', { read: ElementRef }) searchbar: ElementRef;
@@ -28,6 +24,7 @@ export class MapComponent implements OnInit {
     public geolocation: Geolocation,
     public zone: NgZone,
     public platform: Platform,
+    public localStorage: Storage,
     public mapService: MapService,
     public spinner: SpinnerService,
     public modalCtrl: ModalController,
@@ -110,46 +107,46 @@ export class MapComponent implements OnInit {
     });
   }
 
-  currentLocation() {
-    this.spinner.load();
-    this.geolocation.getCurrentPosition().then((position) => {
-      let latLng = new google.maps.LatLng(position.coords.latitude, position.coords.longitude);
-      // console.log(latLng)
-      let latLngObj = {'lat': position.coords.latitude, 'long': position.coords.longitude};
-      // Display  Marker
-      this.map.setCenter(new google.maps.LatLng(position.coords.latitude, position.coords.longitude));
-      this.getAddress(latLngObj);
-      this.spinner.dismiss();
-      localStorage.setItem('current_latlong', JSON.stringify(latLngObj));
-      return latLngObj;
-
-    }, (err) => {
-      console.log(err);
-    });
-  }
-
   // currentLocation() {
   //   this.spinner.load();
-  //   this.geolocation.getCurrentPosition(
-  //     this.successCallback, 
-  //     this.errorCallback, 
-  //     {timeout: 5000, enableHighAccuracy: false});
+  //   this.geolocation.getCurrentPosition().then((position) => {
+  //     let latLng = new google.maps.LatLng(position.coords.latitude, position.coords.longitude);
+  //     // console.log(latLng)
+  //     let latLngObj = {'lat': position.coords.latitude, 'long': position.coords.longitude};
+  //     // Display  Marker
+  //     this.map.setCenter(new google.maps.LatLng(position.coords.latitude, position.coords.longitude));
+  //     this.getAddress(latLngObj);
+  //     this.spinner.dismiss();
+  //     localStorage.setItem('current_latlong', JSON.stringify(latLngObj));
+  //     return latLngObj;
+
+  //   }, (err) => {
+  //     console.log(err);
+  //   });
   // }
 
-  // successCallback(pos) {
-  //   const latLng = new google.maps.LatLng(pos.coords.latitude, pos.coords.longitude);
-  //   let latLngObj = {'lat': pos.coords.latitude, 'long': pos.coords.longitude};
-  //   // Display  Marker
-  //   this.map.setCenter(new google.maps.LatLng(pos.coords.latitude, pos.coords.longitude));
-  //   this.getAddress(latLngObj);
-  //   this.spinner.dismiss();
-  //   localStorage.setItem('current_latlong', JSON.stringify(latLngObj));
-  //   return latLngObj;
-  // }
+  currentLocation() {
+    this.spinner.load();
+    this.geolocation.getCurrentPosition(
+      this.successCallback, 
+      this.errorCallback, 
+      {timeout: 5000, enableHighAccuracy: false});
+  }
 
-  // errorCallback(err) {
-  //   console.log(err);
-  // }
+  successCallback(pos) {
+    const latLng = new google.maps.LatLng(pos.coords.latitude, pos.coords.longitude);
+    let latLngObj = {'lat': pos.coords.latitude, 'long': pos.coords.longitude};
+    // Display  Marker
+    this.map.setCenter(new google.maps.LatLng(pos.coords.latitude, pos.coords.longitude));
+    this.getAddress(latLngObj);
+    this.spinner.dismiss();
+    localStorage.setItem('current_latlong', JSON.stringify(latLngObj));
+    return latLngObj;
+  }
+
+  errorCallback(err) {
+    console.log(err);
+  }
 
   getAddress(latLngObj) {
     // Get the address object based on latLngObj

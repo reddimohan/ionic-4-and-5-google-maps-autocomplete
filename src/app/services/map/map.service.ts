@@ -1,4 +1,5 @@
 import { Injectable } from '@angular/core';
+import { HttpClientTestingModule } from '@angular/common/http/testing';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { map, delay } from 'rxjs/operators';
 
